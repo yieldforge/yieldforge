@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>YIELDFORGE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body id="strategiesPage">
+    <div class="combined-section2">
+        <div class="container">
+
+            <!-- Navbar -->
+            <div>
+                <nav class="navbar navbar-expand-lg bg-transparent navbar-fixed-top">
+                    <div class="container-fluid">
+                        <a class="navbar-brand text-white" href="/"><img src="/assets/images/mask-group.png" alt=""></a>
+                        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="/assets/images/hamburger.png" alt="">
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-white" aria-current="page" href="#">Twitter</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="#">Medium</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link  text-white">Docs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link  text-white">Discord</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <button class="gradient-btn" data="Enter App"></button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- banner -->
+            <div class="banner-section2">
+                <div class="content-container">
+                    <h1 class="banner-heading">
+                        See How Our <span class="gradient-text">Strategies</span> <br>
+                        Perform
+
+                    </h1>
+                    <div class="values-section strategiesContent">
+                        <h2>Concentrated Liquidity <br>
+                            Market-Making in UV3</h2>
+                        <p>The auto-rebalancing strategy ensures that liquidity ranges for a pair are adjusted
+                            automatically upon reaching certain triggers tied to price movements. This feature compounds
+                            accrued fees back into the LP position, enhancing yield for liquidity providers (LPs) in a
+                            passive LP experience. The strategy continually monitors price movements, volatility, and
+                            many more market and pool variables to determine the most cost-efficient way to maximize the
+                            fees generated.</p>
+                        <h3>Pool : <span class="gradient-text">Strategies</span></h3>
+                        <h3>APY : <span class="gradient-text">10%</span></h3>
+                        <img src="/assets/images/nature.png" alt="nature" height="100%" width="100%">
+                    </div>
+                    <button class="gradient-btn-large">More Strategies Coming Soon ...</button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    var navbar = document.getElementById('navbarSupportedContent');
+
+    navbar.addEventListener('show.bs.collapse', function () {
+        document.querySelector('.navbar').classList.add('navbar-collapsed');
+    });
+
+    navbar.addEventListener('hide.bs.collapse', function () {
+        document.querySelector('.navbar').classList.remove('navbar-collapsed');
+    });
+
+</script>
+
+</html>

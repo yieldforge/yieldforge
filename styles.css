@@ -1,0 +1,851 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap");
+#homePage {
+  background: url(./assets/images/bg.jpeg);
+  background-size: cover;
+}
+#strategiesPage {
+  background: url(./assets/images/secondBg.png);
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+ul > li > a {
+  color: #fff;
+}
+ul > li {
+  line-height: 1.5em;
+}
+
+@font-face {
+  font-family: EloquiaDisplayBold;
+  src: url(/assets/font/Eloquia/Typekiln\ -\ EloquiaDisplay-ExtraBold.otf);
+}
+@font-face {
+  font-family: Detacher;
+  src: url(/assets/font/detacher/Detacher-Regular.otf);
+}
+
+/* Override the default Bootstrap navbar-toggler-icon to be white */
+
+.navbar {
+  padding-top: 20px !important;
+}
+/* Large Screens */
+@media (min-width: 992px) {
+  .navbar.navbar-collapsed {
+    background-color: transparent !important; /* Transparent background on large screens */
+  }
+}
+
+/* Small Screens */
+@media (max-width: 991.98px) {
+  .navbar.navbar-collapsed {
+    background-color: #201b1b !important; /* Desired background color on small screens */
+  }
+}
+
+/* On Small Screens */
+@media (max-width: 991.98px) {
+}
+
+/* On Large Screens */
+@media (min-width: 992px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+}
+.nav-link {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  padding: 0 20px !important;
+  line-height: auto;
+}
+
+.gradient-btn {
+  /* padding: 20px 60px; */
+  font-family: "Inter", sans-serif;
+  border: none;
+  outline: none;
+  position: relative;
+  border-radius: 30px 30px 30px 30px; /* make the button rounded only on the horizontal ends */
+  background: linear-gradient(to bottom, #c41019, #f4aa1c);
+
+  cursor: pointer;
+  z-index: 1;
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+}
+.gradient-btn::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
+  border-radius: 30px 30px 30px 30px; /* match the button's border radius */
+  background-color: #201b1b;
+  z-index: -1;
+  transition: 200ms;
+}
+.gradient-btn::after {
+  content: attr(data);
+  font-size: 16px;
+  background: linear-gradient(to bottom, #c41019, #f4aa1c);
+  -webkit-background-clip: text;
+  color: transparent;
+  border-radius: 30px 30px 30px 30px; /* match the button's border radius */
+  transition: 200ms;
+}
+.gradient-btn:hover::before {
+  opacity: 50%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.gradient-btn:hover::after {
+  color: white;
+}
+
+.gradient-btn-fill {
+  /* padding: 20px 60px; */
+  border: none;
+  outline: none;
+  position: relative;
+  border-radius: 30px 30px 30px 30px; /* make the button rounded only on the horizontal ends */
+  background: linear-gradient(
+    94.17deg,
+    #c6151a -9.81%,
+    #d87031 47.16%,
+    #e7c046 96.39%
+  );
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 1;
+  width: 150px;
+  height: 40px;
+  font-family: "Inter", sans-serif;
+
+  font-weight: 100;
+  line-height: 22px;
+  letter-spacing: 0em;
+}
+
+.gradient-btn-fill:hover {
+  background: #201b1b;
+  border: 2px solid #d87031;
+}
+
+/* banner */
+.combined-section {
+  background-image: url("/assets/images/bannerBG.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  padding-bottom: 100px;
+}
+/* Styles for the banner section */
+.banner-section {
+  height: 600px; /* You can adjust this value as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Assuming you want white text on a dark image. Adjust as needed. */
+}
+
+.content-container {
+  text-align: center;
+}
+
+.banner-heading {
+  font-family: EloquiaDisplayBold;
+  font-size: 2.5em; /* Adjust as needed */
+  margin-bottom: 15px; /* Space between heading and subtext */
+}
+
+/* values section css */
+
+.values-section {
+  width: 100%;
+  border-radius: 30px;
+  background: #ffffff1a;
+  padding: 30px !important;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 25px 0px #00000026;
+  margin-bottom: 10%;
+}
+
+.values-section .with-boder {
+  border-right: 2px solid #353535;
+}
+
+.values-section .content-container {
+  width: 33.3%;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.heading-text {
+  font-family: EloquiaDisplayBold;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 62px;
+  letter-spacing: 0em;
+  /* background: linear-gradient(180deg, #C51119 6.25%, #D45D2C 45.35%, #E6BD45 79.17%); */
+  background: linear-gradient(to bottom, #c51119, #d45d2c, #e6bd45);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 0;
+}
+
+.small-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  color: white;
+  margin-bottom: 0;
+}
+
+/* on small screen  */
+@media (max-width: 800.98px) {
+  .values-section {
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  .values-section .content-container {
+    width: 89%;
+    padding-bottom: 10px;
+  }
+
+  .values-section .with-boder {
+    border-right: none;
+    border-bottom: 2px solid #353535;
+  }
+}
+
+.gradient-text {
+  background-image: linear-gradient(
+    180deg,
+    #c40e18 0%,
+    #d45d2c 47.92%,
+    #e7bf46 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.banner-subtext {
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+  font-size: 1em; /* Adjust as needed */
+  margin-bottom: 30px; /* Space between subtext and buttons */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-row {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+  justify-content: center;
+}
+
+/* Style the buttons (You can also use Bootstrap button classes if you're using Bootstrap) */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* image text section css */
+
+.image-content-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 100%;
+  gap: 120px;
+  margin-bottom: 5%;
+}
+
+.image-content-section .left-content {
+  order: 2; /* Change the order to display on the left */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.image-content-section .left-content h2 {
+  max-width: 80%;
+}
+
+.image-content-section .right-content {
+  order: 1; /* Change the order to display on the right */
+  text-align: right;
+}
+
+.image-content-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query for responsiveness */
+@media (min-width: 768px) {
+  .image-content-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .image-content-section .left-content {
+    order: 1;
+  }
+  .image-content-section .right-content {
+    order: 2;
+  }
+
+  .image-content-section .left-content,
+  .image-content-section .right-content {
+    flex: 1;
+  }
+
+  .image-content-section img {
+    max-width: 100%; /* Adjust the image width as needed */
+  }
+}
+
+/* second img section */
+.image-content-section2 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 100%;
+  gap: 120px;
+  margin-bottom: 10%;
+}
+
+.image-content-section2 .left-content {
+  order: 2; /* Change the order to display on the left */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.image-content-section2 .right-content h2 {
+  max-width: 80%;
+  margin-top: 50px;
+}
+.image-content-section2 .right-content {
+  order: 1; /* Change the order to display on the right */
+  text-align: left;
+}
+
+.image-content-section2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query for responsiveness */
+@media (min-width: 768px) {
+  .image-content-section2 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .image-content-section2 .left-content {
+    order: 1;
+  }
+  .image-content-section2.right-content {
+    order: 2;
+  }
+
+  .image-content-section2 .left-content,
+  .image-content-section2 .right-content {
+    flex: 1;
+  }
+
+  .image-content-section2 img {
+    max-width: 100%; /* Adjust the image width as needed */
+  }
+}
+
+.imgBtn {
+  width: 230px;
+}
+
+.title {
+  font-family: EloquiaDisplayBold;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 57px;
+  letter-spacing: 0em;
+  color: white;
+}
+
+/* team  */
+
+/* Team section css  */
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+  text-align: center;
+  width: 100%;
+}
+
+.team-section .team-heading-container h2 {
+  font-family: Eloquia Display;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 67px;
+  letter-spacing: 0em;
+  color: #ffffff;
+}
+
+.team-section .team-heading-container p {
+  font-family: "Inter", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #ffffff;
+}
+
+.team-section .team-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.team-container .team-member {
+  background: #ffffff1a;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.team-member h3 {
+  background: linear-gradient(to bottom, #e6bd45, #d45d2c, #c51119);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-top: 83px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  font-family: Detacher;
+  margin-bottom: 0;
+}
+
+.team-member .position {
+  font-size: 16px;
+  color: #9a9a9a;
+  font-family: 400;
+  line-height: 24px;
+  font-size: "Poppins", sans-serif;
+}
+
+.team-member p {
+  font-family: "Inter", sans-serif;
+
+  font-size: 18px;
+  font-weight: 400;
+  /* line-height: 27px; */
+  color: #ffffff;
+}
+
+.team-member img {
+  width: 166px;
+  height: 166px;
+  position: absolute;
+  top: -83px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* on small screen  */
+@media (max-width: 800.98px) {
+  .team-section .team-container {
+    flex-direction: column;
+    gap: 123px;
+  }
+}
+
+/* roadmap */
+.roadmap {
+  padding: 50px 0;
+  position: relative;
+  margin-bottom: 10%;
+}
+
+.road-image img {
+  width: 100%; /* This makes the image span the full width of its container */
+  height: auto; /* This preserves the original aspect ratio of the image */
+  display: block; /* To remove any default alignments/margins */
+  padding-bottom: 20px;
+}
+div.road-image img.desktop-roadmap {
+  display: block;
+}
+
+div.road-image img.mobile-roadmap {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  div.road-image img.desktop-roadmap {
+    display: none;
+  }
+
+  div.road-image img.mobile-roadmap {
+    display: block;
+  }
+}
+
+.section-heading {
+  font-family: EloquiaDisplayBold;
+  font-size: 2.5em; /* Adjust as needed */
+  margin-bottom: 15px; /* Space between heading and subtext */
+  color: #ffffff;
+}
+
+.its-subtext {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+}
+
+.milestone {
+  position: absolute;
+  top: 0; /* Adjust this to move the milestone up or down */
+  transform: translateX(-50%); /* To center the milestone */
+}
+
+.milestone img {
+  display: block;
+  margin: 0 auto; /* To center the arrow image */
+}
+
+.milestone p {
+  text-align: center;
+  margin-top: 10px; /* Some spacing between the arrow and the heading */
+}
+
+/* footer section  */
+.footer {
+  display: block;
+  width: 100%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  padding: 150px 25px 50px 25px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.footer-start {
+  display: flex;
+  position: relative;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
+  max-width: 1280px;
+  width: 90%;
+  margin: auto;
+  padding: 80px 100px;
+  background: url("/assets/images/footerImg.png"),
+    linear-gradient(180deg, #e6c045 0%, #d35d2c 65.21%, #c51018 125.21%);
+  background-size: cover;
+  border-radius: 15px;
+  /* If you want the text and button one above the other */
+  flex-direction: column;
+}
+.start-learning {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -200px;
+}
+.footer .inner {
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+  column-gap: 20px;
+  row-gap: 20px;
+  max-width: 1180px;
+  margin: auto;
+  text-align: left;
+}
+.main-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.main-logo .logo {
+  display: inline-block;
+  width: 100px;
+  height: 100%;
+  margin-right: 10px;
+}
+.main-logo .logo > img {
+  display: block;
+  width: 100%;
+  min-width: 40px;
+}
+.logo-info {
+  text-align: left;
+  line-height: 20px;
+}
+.text {
+  font-size: 17px;
+  line-height: 17px;
+  color: #fff;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+}
+.copyright {
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+}
+.footer .column {
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+}
+.footer .column .column-title {
+  font-family: EloquiaDisplayBold;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+.footer .column .column-title:not(:first-child) {
+  margin-top: 1em;
+}
+
+.footerNavList {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerNavList a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  line-height: 2;
+}
+
+.footerNavList a:hover {
+  color: #d35d2c;
+}
+
+.illustration {
+  left: 8%;
+  position: absolute;
+  top: -28px;
+}
+a.button {
+  display: inline-flex;
+  position: relative;
+  height: 60px;
+  margin-right: 20px;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  background: #000;
+  color: #d35d2c;
+  border-radius: 36px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 30px;
+  text-decoration: unset;
+  box-shadow: 0px 24px 74px rgb(60 0 189 / 20%);
+}
+.section-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #000;
+  font-family: EloquiaDisplayBold;
+  font-size: 2.5em; /* Adjust as needed */
+  margin-bottom: 15px; /* Space between heading and subtext */
+}
+.section-sub-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color: #000;
+  text-align: center;
+}
+
+@media only screen and (max-width: 990px) and (min-width: 200px) {
+  .footer {
+    margin-top: 50%;
+  }
+  .footer .inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .start-learning {
+    width: 100%;
+    order: 1; /* Ensures start-learning is at the top */
+  }
+
+  .column.is-logo {
+    order: 2; /* Places logo after start-learning and before other columns */
+    margin-bottom: 20px; /* Some spacing after the logo */
+  }
+
+  /* Ensure other columns come after the logo */
+  .column.is-nav {
+    order: 3;
+  }
+  .footer-start {
+    width: 100%;
+    display: block;
+    padding: 30px 20px;
+    margin: 30px 0;
+  }
+  .section-title {
+    font-size: 30px;
+  }
+  .section-sub-heading {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+  }
+  footer.footer {
+    padding-top: 0;
+  }
+  a.button {
+    height: 50px;
+    margin-top: 10px;
+  }
+  .main-logo .logo {
+    margin-top: 80px;
+    order: 2;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.lastFooter {
+  text-align: center;
+  color: #ffffff;
+}
+
+/* second page  */
+
+/* Styles for the banner section */
+.banner-section2 {
+  margin-top:100px;
+  height: 100vh; /* Subtracting the navbar's height */
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  color: white; /* Assuming you want white text on a dark image. Adjust as needed. */
+}
+
+.strategiesContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers direct children horizontally */
+  justify-content: center; /* Centers direct children vertically */
+  margin-bottom: 20px;
+}
+
+.strategiesContent h2 {
+  font-family: EloquiaDisplayBold;
+  font-size: 2.2em; /* Adjust as needed */
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  word-spacing: 5px;
+}
+.strategiesContent h3 {
+  font-family: EloquiaDisplayBold;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-align: left; /* This is your desired style, no !important needed unless there's a specificity conflict */
+  align-self: flex-start; /* This will ensure the h3 is aligned to the start regardless of parent's align-items */
+}
+
+.values-section.strategiesContent h3 {
+  text-align: left !important;
+}
+
+.strategiesContent p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  color: white;
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 27px;
+}
+
+.gradient-btn-large {
+  /* padding: 20px 60px; */
+  border: none;
+  outline: none;
+  position: relative;
+  border-radius: 10px; /* make the button rounded only on the horizontal ends */
+  background: linear-gradient(
+    94.17deg,
+    #c6151a -9.81%,
+    #d87031 47.16%,
+    #e7c046 96.39%
+  );
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  font-family: EloquiaDisplayBold;
+  font-size: 1.5em;
+  padding: 20px 20px;
+  text-align: left;
+  font-weight: 100;
+  letter-spacing: 0em;
+}
+
+.gradient-btn-large:hover {
+  cursor: pointer;
+}
