@@ -29,10 +29,19 @@ ul > li {
   line-height: 1.5em;
 }
 
-@font-face {
+*/@font-face {
   font-family: EloquiaDisplayBold;
   src: url(/assets/font/Eloquia/Typekiln\ -\ EloquiaDisplay-ExtraBold.otf);
+}*/
+@font-face {
+    font-family: EloquiaDisplayBold;
+    src: url('/assets/font/Eloquia/webfontkitEloqiuaEB/typekiln_-_eloquiadisplay-extrabold-webfont.woff2') format('woff2'),
+         url('/assets/font/Eloquia/webfontkitEloqiuaEB/typekiln_-_eloquiadisplay-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
+
 @font-face {
   font-family: Detacher;
   src: url(/assets/font/detacher/Detacher-Regular.otf);
