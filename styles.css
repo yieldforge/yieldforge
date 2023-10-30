@@ -216,7 +216,7 @@ ul > li {
   gap: 8px;
 }
 .heading-text {
-  font-family: EloquiaDisplayBold;
+  font-family: Eloquia Display;
   font-size: 42px;
   font-weight: 800;
   line-height: 62px;
@@ -417,7 +417,7 @@ ul > li {
 }
 
 .title {
-  font-family: EloquiaDisplayBold;
+  font-family: Eloquia Display;
   font-size: 42px;
   font-weight: 800;
   line-height: 57px;
@@ -550,7 +550,7 @@ div.road-image img.mobile-roadmap {
 }
 
 .section-heading {
-  font-family: EloquiaDisplayBold;
+  font-family: Eloquia Display;
   font-size: 2.5em; /* Adjust as needed */
   margin-bottom: 15px; /* Space between heading and subtext */
   color: #ffffff;
@@ -710,7 +710,7 @@ a.button {
   font-size: 44px;
   font-weight: 700;
   color: #000;
-  font-family: EloquiaDisplayBold;
+  font-family: Eloquia Display;
   font-size: 2.5em; /* Adjust as needed */
   margin-bottom: 15px; /* Space between heading and subtext */
 }
